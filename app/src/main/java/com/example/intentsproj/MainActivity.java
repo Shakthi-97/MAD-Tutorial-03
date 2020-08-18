@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 openSecondActivity();
+                showToast();
             }
 
             public void openSecondActivity() {
@@ -44,10 +45,13 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra(Extra_Number2,number2);
                 startActivity(intent);
 
+            }
+
+            private void showToast() {
+
                 Toast toast = Toast.makeText(MainActivity.this, "You just clicked the OK button", Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.BOTTOM, 0, 0);
                 toast.show();
-
 
                 LayoutInflater li = getLayoutInflater();
                 View layout = li.inflate(R.layout.customtoast, (ViewGroup) findViewById(R.id.custom_toast_layout));
@@ -57,9 +61,8 @@ public class MainActivity extends AppCompatActivity {
                 toast1.setGravity(Gravity.BOTTOM, 0, 0);
                 toast1.setView(layout);
                 toast1.show();
-
-
             }
+
 
         });
 
