@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
-            private void showToast() {
+            private void showToast() {           
 
                 Toast toast = Toast.makeText(MainActivity.this, "You just clicked the OK button", Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.BOTTOM, 0, 0);
@@ -70,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 }
+
+///
 
 
 
